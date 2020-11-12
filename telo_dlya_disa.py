@@ -25,9 +25,9 @@ async def on_ready():
     global engine
     global t_chanel
     i=0
-    server = client.get_guild(502490265517293568)
+    server = client.get_guild('''GUILD id''')
     while True:
-        server = client.get_guild(502490265517293568)
+        server = client.get_guild('''GUILD id''')
         mess=input("|| ME: ")
         if mess.startswith('!'):
             if mess=='!channel_text':
@@ -62,7 +62,7 @@ async def on_ready():
 @client.listen('on_message')
 async def message(message):
     channel= message.channel
-    if message.author.id!=774134169953108010:
+    if message.author.id!='''bot id''':
         print(f'||{message.author}: {message.content}   |{channel}')
 
 
